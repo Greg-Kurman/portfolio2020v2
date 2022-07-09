@@ -15,16 +15,36 @@
         }
         
         .text {
+            display: inline-block;
+            
+            opacity: 0.7;
+            border-radius: 10px;
+            background-color: #404040;
             font-weight: 100;
             font-size: 28px;
             color: #ffffff;
-            padding-top: 14%;
-            padding-left: 40%;
-            width: 1800px
+            margin-left: 100px;
+            max-width: 1900px;
+            line-height: 1;
+            z-index: 10;
+        }
+
+        @media (max-width: 1500px) {
+            .text {
+                font-size: 22px;
+                line-height:1;
+                margin-left: 300px;
+                }
         }
         
         .dud {
             color: #757575;
+        }
+
+        .video {
+            overflow: hidden;
+            object-fit: cover;
+            margin: 0 0;
         }
     </style>
 
@@ -163,9 +183,9 @@
                         <div class="text" align="center"></div>
                     </div>
                     <div class="align-left" id="hover1">
-                        <p>front-end specialist</p>
+                        <p>front-end develomper</p>
                         <h2 class="title">Kurman</h2>
-                        <p>Найми меня и я сделаю всю грязную работу, вооружившись React JS</p>
+                        <h5>Найми меня и я сделаю всю грязную работу <br> вооружившись React/Vue JS</h5>
                         <a href="gallery-4col.html" class="btn">
                             <span>Портфолио</span>
                             <i class="fa fa-arrow-right"></i>
@@ -186,7 +206,7 @@
         <footer id="footer" class="fixed ">
 
             <!-- BUTTON FOR PLAY MUSIC-->
-            <!-- <div onclick="play()"> Play music <img src="../Alex Zane/assets/images/musicOFF.png" alt=""> </div> -->
+            <div onclick="play()"> Play music <img src="../Alex Zane/assets/images/musicOFF.png" alt=""> </div>
 
         </footer>
         <!-- /Footer -->
@@ -223,7 +243,6 @@
             });
     </script>
 
-
     <script>
         function play() {
             var video = document.querySelector('.video-bg');
@@ -238,10 +257,7 @@
                 video.pause();
                 video.muted = 1;
                 text.innerHTML = "Click to play";
-
-
             }
-
         }
     </script>
     <script src="js/index.js"></script>

@@ -163,6 +163,12 @@ blockquote {
     transition-timing-function: cubic-bezier(0.75, 0, 0.125, 1);
 }
 
+.video {
+    max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
 .btn>span {
     padding-left: 0.35em;
 }
@@ -648,7 +654,6 @@ nav ul ul ul li {
 /*Images home page version 1*/
 
 .video {
-    
     position: fixed;
     top: 0;
     right: 0;
@@ -1281,7 +1286,7 @@ textarea.form-control {
     }
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1300px) {
     .video {
         position: absolute;
         top: -200%;
@@ -1293,7 +1298,7 @@ textarea.form-control {
         min-height: 100vh;
         max-width: calc(100vh * 1.78);
         max-height: calc(100vw / 1.78);
-        width: auto;
+        max-width: 100%;
     }
     .row {
         max-width: 100%;
@@ -1448,7 +1453,7 @@ textarea.form-control {
         min-height: 100vh;
         max-width: calc(100vh * 1.78);
         max-height: calc(100vw / 1.78);
-        width: auto;
+        max-width: 100%;
     }
     .active .cover-titles-2 {
         margin: 2rem 0 0;
