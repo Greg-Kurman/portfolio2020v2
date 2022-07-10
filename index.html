@@ -16,31 +16,33 @@
         
         .text {
             display: inline-block;
-            
             opacity: 0.7;
-            border-radius: 10px;
-            background-color: #404040;
             font-weight: 100;
             font-size: 28px;
             color: #ffffff;
             max-height: 100%;
             max-width: 1900px;
-            line-height: 1;
             z-index: 10;
+            padding: 0 20px;
+            margin: 100px 0 50px 100px;
+            background-color: #757575;
+            border-radius: 50px 50px 0px 50px;
+            line-height: 2;
+
         }
 
-        @media (max-width: 1500px) {
+       
+
+        @media (max-width: 1350px) {
             .text {
-                font-size: 22px;
-                line-height:1;
-                margin-left: 300px;
+               display: none;
                 }
         }
 
         @media (max-width: 1000px) {
-            .text {
-               display: none;
-                }
+            .music {
+                display: none;
+            }
         }
         
         .dud {
@@ -52,6 +54,8 @@
             object-fit: cover;
             margin: 0 0;
         }
+
+        
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -185,11 +189,13 @@
                     </div>
                 </div>
                 <div class="cover-titles">
-                    <div class="container" align="center">
-                        <div class="text" align="center"></div>
+                    <div class="container">
+                        <div class="text__wrapp">
+                            <div class="text"></div>
+                        </div>
                     </div>
                     <div class="align-left" id="hover1">
-                        <p>front-end develomper</p>
+                        <p>front-end developer</p>
                         <h2 class="title">Kurman</h2>
                         <h5>Найми меня и я сделаю всю грязную работу <br> вооружившись React/Vue JS</h5>
                         <a href="gallery-4col.html" class="btn">
@@ -212,7 +218,7 @@
         <footer id="footer" class="fixed ">
 
             <!-- BUTTON FOR PLAY MUSIC-->
-            <div onclick="play()"> Play music <img src="../Alex Zane/assets/images/musicOFF.png" alt=""> </div>
+            <div onclick="play()" class="music"> Play music <img src="../Alex Zane/assets/images/musicOFF.png" alt=""> </div>
 
         </footer>
         <!-- /Footer -->
