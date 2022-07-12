@@ -1262,6 +1262,22 @@ textarea.form-control {
 /*  12. RESPONSIVE
 /*-----------------------------------------------------------------------------------*/
 
+@media (max-width: 1700px) {
+    .video {
+        position: absolute;
+        top: -200%;
+        left: -200%;
+        right: -200%;
+        bottom: -200%;
+        margin: auto;
+        min-width: 100vw;
+        min-height: 100vh;
+        max-width: calc(100vh * 1.78);
+        max-height: calc(100vw / 1.78);
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 1024px) {
     .row {
         margin: 0 50px;
