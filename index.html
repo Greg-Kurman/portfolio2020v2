@@ -13,10 +13,12 @@
             background: #212121;
             height: 100%;
         }
+            ::-webkit-scrollbar {
+            width: 0;
+            }
         
         .text {
             display: inline-block;
-            opacity: 0.7;
             font-weight: 100;
             font-size: 28px;
             color: #ffffff;
@@ -29,8 +31,6 @@
             line-height: 2;
 
         }
-
-       
 
         @media (max-width: 1350px) {
             .text {
@@ -49,12 +49,13 @@
         }
 
         .video {
+            position: absolute;
             overflow: hidden;
             object-fit: cover;
             margin: 0 0;
+            height: 100px;
         }
 
-        
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -67,7 +68,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="https://i.playground.ru/p/6M4bo6X2o2Sw7qb65R0shw.png">
 
     <!-- Page Title -->
     <title>Главная</title>
@@ -105,7 +106,7 @@
     <main class="container">
 
         <!-- Mobile Menu -->
-        <div class="mobile-menu-overlay transition" style="background-color: black;">
+        <div class="mobile-menu-overlay transition" style="background-color: black; z-index: 10;" >
             <div class="mobile-menu">
                 <i class="fa fa-times fa-2x"></i>
             </div>
@@ -130,25 +131,30 @@
         <!-- Header -->
         <header class="transition header fixed">
             <div class="main-menu">
-                <div id="logo">
-                    <a href="index-1.html">
+                <div id="logo"  >
+                    <a href="index-1.html" >
 
                     </a>
                 </div>
                 <!-- Menu -->
                 <nav id="menu" class="col-md-10 col-sm-10">
-                    <ul class="hidden-xs">
-                        <li><a class="menu-active" href="index.html">Главная</a></li>
-                        <!-- Drop Down -->
+					<ul class="hidden-xs">
+						<li><a class="menu-active" href="#">Главная</a>
+							<!-- Drop Down -->
 
+						</li>
 
-                        <li><a href="about.html">Контакты</a></li>
+						<li><a  href="gallery-4col.html">Портфолио</a>
+							<!-- Tier Drop Down -->
 
-                    </ul>
-                    <div class="mobile-menu col-xs-2 pull-right visible-xs">
-                        <i class="fa fa-bars fa-2x"></i>
-                    </div>
-                </nav>
+						</li>
+						<li><a href="about.html">Контакты</a></li>
+
+					</ul>
+					<div class="mobile-menu col-xs-2 pull-right visible-xs">
+						<i class="fa fa-bars fa-2x"></i>
+					</div>
+				</nav>
                 <!-- /Menu -->
 
             </div>
@@ -163,12 +169,12 @@
             <section class="section " id="section1" style="background-color:black">
                 <div onclick="play()">
                     <video class="video" muted autoplay loop>
-						<source src="./assets/images/home/video.mp4" type="video/mp4">
+						<source src="./assets/images/video/video.mp4" type="video/mp4">
 						<div> </div>
 
 					</video>
                     <video class="video-bg" muted loop width="1" height="1">
-						<source src="./assets/images/home/video1.mp4" type="video/mp4">
+						<source src="./assets/images/video/video1.mp4" type="video/mp4">
 						<div> </div>
 
 					</video>
@@ -187,6 +193,7 @@
                         <div></div>
                     </div>
                 </div>
+                
                 <div class="cover-titles">
                     <div class="container">
                         <div class="text__wrapp">
@@ -197,10 +204,11 @@
                         <p>front-end developer</p>
                         <h2 class="title">Kurman</h2>
                         <h5>Найми меня и я сделаю всю грязную работу <br> вооружившись React/Vue JS</h5>
-                        <a href="gallery-4col.html" class="btn">
+                        <a href="gallery-4col.html" class="btn" style="z-index: 3;">
                             <span>Портфолио</span>
                             <i class="fa fa-arrow-right"></i>
                         </a>
+                        
                         <audio id="myaudio" preload="auto">
 							<source src="1.mp3">
 
@@ -217,7 +225,7 @@
         <footer id="footer" class="fixed ">
 
             <!-- BUTTON FOR PLAY MUSIC-->
-            <div onclick="play()" class="music"> Play music <img src="../Alex Zane/assets/images/musicOFF.png" alt=""> </div>
+            <div onclick="play()" class="music">  Play rain music <img src="assets/images/musicOFF.png" alt=""> </div>
 
         </footer>
         <!-- /Footer -->
